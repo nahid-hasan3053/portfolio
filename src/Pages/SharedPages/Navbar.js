@@ -14,9 +14,9 @@ const Navbar = () => {
                     <summary>
                         Explore More
                     </summary>
-                    <ul className="p-2 bg-base-100 text-black font-semibold rounded-t-none">
-                        <li><Link>Experience</Link></li>
-                        <li><Link>Future Goals</Link></li>
+                    <ul className="p-2 bg-base-100 text-black font-semibold rounded-t-none rounded-b-lg">
+                        <li><Link to='/experience'>Experience</Link></li>
+                        <li><Link>Travel</Link></li>
                     </ul>
                     </details>
                 </li>
