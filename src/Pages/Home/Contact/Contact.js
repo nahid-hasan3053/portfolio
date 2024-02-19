@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 
 const Contact = () => {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     
     const handleSubmitForm = data =>{
         console.log(data);
@@ -24,19 +24,23 @@ const Contact = () => {
             <form onSubmit={handleSubmit(handleSubmitForm)} className='grid grid-cols-1 px-3 md:w-1/2 mx-auto gap-2 pb-7'>
                 <label className="form-control ">
                     <div className="label"><span className="label-text text-white text-sm font-bold">Name*</span></div>
-                    <input {...register('name')} name='name' type="text" placeholder="Enter your name" className="input w-full rounded-none" />
+                    <input {...register('name', {required: 'Name is required'})} name='name' type="text" placeholder="Enter your name" className="input w-full rounded-none" />
+                    {errors.name && <p className='text-red-600 text-sm mt-2'>{errors.name.message}</p>}
                 </label>
                 <label className="form-control">
                     <div className="label"><span className="label-text text-white text-sm font-bold">Email*</span></div>
-                    <input {...register('email')} name='email' type="text" placeholder="Enter your email" className="input w-full rounded-none" />
+                    <input {...register('email', {required: 'Email is required'})} name='email' type="text" placeholder="Enter your email" className="input w-full rounded-none" />
+                    {errors.email && <p className='text-red-600 text-sm mt-2'>{errors.email.message}</p>}
                 </label>
                 <label className="form-control">
                     <div className="label"><span className="label-text text-white text-sm font-bold">Subject*</span></div>
-                    <input {...register('subject')} name='subject' type="text" placeholder="Enter your subject" className="input w-full rounded-none" />
+                    <input {...register('subject', {required: 'Subject is required'})} name='subject' type="text" placeholder="Enter your subject" className="input w-full rounded-none" />
+                    {errors.subject && <p className='text-red-600 text-sm mt-2'>{errors.subject.message}</p>}
                 </label>
                 <label className="form-control">
                     <div className="label"><span className="label-text text-white text-sm font-bold">Message*</span></div>
-                    <textarea {...register('message')} name='message' placeholder='Enter your message' className="textarea textarea-bordered w-full rounded-none " cols="30" rows="2"></textarea>
+                    <textarea {...register('message', {required: 'Message is required'})} name='message' placeholder='Enter your message' className="textarea textarea-bordered w-full rounded-none " cols="30" rows="2"></textarea>
+                    {errors.message && <p className='text-red-600 text-sm mt-2'>{errors.message.message}</p>}
                 </label>
                 <input type="submit" className='w-full mt-4 btn btn-outline btn-secondary' />
             </form>

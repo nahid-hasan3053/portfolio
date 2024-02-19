@@ -1,5 +1,6 @@
 import React from 'react';
 import bg from '../../../assets/bg.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -17,7 +18,7 @@ const Banner = () => {
                         <h1 className="mb-5 text-5xl font-bold">NAHID</h1>
                         <h1 className="mb-5 text-5xl font-bold italic">CREATIVE CREATOR</h1>
                         <h1 className="mb-5 text-5xl font-bold">DHAKA 2024</h1>
-                        <button className='btn btn-primary'>Let's explore</button>
+                        <Link to='/experience' className='btn btn-primary'>Let's explore</Link>
                     </div>
                 </div>
         </div>

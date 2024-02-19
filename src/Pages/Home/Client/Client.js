@@ -14,13 +14,13 @@ const Client = () => {
             title: 'Software Engineer at Google',
             description: 'Hey thanks a lot for the hard work! I surely hope to work in the future too. And good luck for your study and career!',
         },
-        {
-            _id: 2,
-            img: client1,
-            name: 'Md Jillur Rahman',
-            title: 'Politician',
-            description: 'You are doing great job keep doing this all my support and love is always for you. keep doing more better work for us!',
-        }
+        // {
+        //     _id: 2,
+        //     img: client1,
+        //     name: 'Md Jillur Rahman',
+        //     title: 'Politician',
+        //     description: 'You are doing a great job; keep up the good work. All my support and love are always with you. Keep striving to do even better for us!',
+        // }
     ]
 
     return (

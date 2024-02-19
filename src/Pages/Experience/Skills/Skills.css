@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+:root{
+    --main :#0a192f;
+    --mainlight: #0b264e;
+    --white :#ccd6f6;
+    --cyan :#5ff0d0;
+    }
+.box {
+    font-family:'comfortaa', sans-serif;
+    color: var(--cyan);
+    background-color: var(--main);
+    align-items: center;
+    justify-content: center;
+}

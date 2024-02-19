@@ -1,9 +1,12 @@
 import React from 'react';
+import Projects from '../Projects/Projects';
+import Skills from '../Skills/Skills';
 
 const Experience = () => {
     return (
         <div>
-            <h1>Coming Soon!</h1>
+            <Skills></Skills>
+            <Projects></Projects>
         </div>
     );
 };
